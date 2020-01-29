@@ -24,9 +24,7 @@ data "aws_iam_role" "CodePipelineRef" {
 #}
 
 
-variable "BaseS3Bucket" {
-    default = "kch-matumaini"
-}
+
 variable "CodeS3Bucket" {
     default = "kch-matumaini-source"
 }

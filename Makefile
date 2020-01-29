@@ -6,7 +6,7 @@ CHECK := @base -c '\
 	if [[ $(INSPECT) -ne 0 ]]; \
 	then exit $(INSPECT); fi' VALUE
 
-.PHONY: cicd-build clean cicd-plan matumaini
+.PHONY: cicd-build clean cicd-plan
 
 cicd-build:
 		${INFO} "building CICD infrastructure"
@@ -21,11 +21,6 @@ clean:
 cicd-plan:
 		${INFO} "building CICD infrastructure"
 		@ terraform plan
-		${INFO} "build complete"
-
-matumaini:
-		${INFO} "building docker image"
-		@ matumaini-app.sh
 		${INFO} "build complete"
 
 # Cosmetics - Setting colors to be used in output

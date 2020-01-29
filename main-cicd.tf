@@ -216,13 +216,6 @@ resource "aws_iam_policy_attachment" "KCHMatumainiServiceCodeBuildServiceRoleAtt
 resource "aws_ecr_repository" "KCHMatumainiECR" {
   name = "${var.DockerAppName}/service"
 }
-//resource "aws_ecs_cluster" "KCHMatumainiECSCluster" {
-//  name = "${var.ECSCluster}"
-//}
-//resource "aws_cloudwatch_log_group" "KCHMatumainiLogGroup" {
-//  name = "${var.DockerAppName}-logs"
-//}
-
 
 resource "aws_ecr_repository_policy" "KCHMatumainiECRPolicy" {
   repository = "${aws_ecr_repository.KCHMatumainiECR.name}"
